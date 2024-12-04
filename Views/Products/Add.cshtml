@@ -1,0 +1,63 @@
+@model TestIgnatov.Models.ViewModels.Product.AddProduct
+
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/products/addForm.css" />
+    <script src="~/js/products/addProduct/categories-get.js"></script>
+}
+
+<form asp-action="Add" enctype="multipart/form-data">
+
+    <div class="add-container">
+        <div class="add-title">
+            Add a new product
+        </div>
+        <div class="add-form">
+
+            <div class="inputs-container">
+                <a id="image-link"class="image-display"  >
+                    <img id="image" src="~/images/defaultImage.png" />
+                </a>
+                <input id="image-input" class="image-input" accept="image/png" type="file" asp-for="Image">
+            </div>
+            <div class="inputs">
+                <div class="inputs-container">
+                    <input type="text" placeholder="Product Name" class="form-control" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="price-stock-container inputs-container">
+                    <div>
+                        <input type="text" placeholder="Price" class="form-control" asp-for="Price">
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Stock" class="form-control" asp-for="Stock">
+                        <span asp-validation-for="Stock" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="inputs-container">
+                    <textarea placeholder="Description" class="desc-input" asp-for="Description">
+
+            </textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="inputs-container">
+                    <select class="form-select" name="CategoryName" id="categories" asp-for="CategoryName">
+                        <option value="null" selected disabled>Category</option>
+                    </select>
+                    <a class="category-link" asp-action="AddCategory" asp-controller="Category">Add a new Category</a>
+                </div>
+                <div class="justify-content-center d-flex gap-1">
+                    <button class="btn btn-success" type="submit">Add Product</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+@section Scripts {
+    <script src="~/js/products/addProduct/add-product-image.js" asp-append-version="true"></script>
+}

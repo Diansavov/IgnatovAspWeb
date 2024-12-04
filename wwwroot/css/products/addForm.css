@@ -1,0 +1,57 @@
+.add-container {
+    display: block;
+    width: 850px;
+    height: 460px;
+    margin: 10px auto;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 30px 30px 30px 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.add-form{
+    display: flex;
+    justify-content: space-between;
+}
+.add-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.category-link {
+    color: #23be76;
+}
+.category-link:hover{
+    color: #1b925b;
+}
+
+.price-stock-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+.inputs-container{
+    margin-bottom: 20px;
+}
+.desc-input{
+    width: 100%;
+    height: 100px;
+}
+.image-display{
+    display: block;
+    width: 350px;
+    height: 300px;
+    overflow: hidden;
+    outline: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.image-display img{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.image-input{
+    display: none;
+}

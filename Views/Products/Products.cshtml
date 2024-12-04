@@ -1,0 +1,42 @@
+@model List<Product>;
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/products/products.css" />
+    <link rel="stylesheet" href="~/css/products/table/datatables.min.css" />
+    <link rel="stylesheet" href="~/css/products/table/datatables-custom.css" />
+    <script src="~/js/products/table/datatables.js"></script>
+    <script src="~/js/products/productsDataTable.js"></script>
+}
+<div class="container-text text-title">
+    <h1>All Products</h1>
+</div>
+<div class="products-container">
+    <div class="redirect-buttons">
+        <a class="btn btn-success" asp-area="" asp-controller="Products" asp-action="Add">Add Product</a>
+    </div>
+
+    <div class="search-bars">
+        <input placeholder="Search name" id="search-name" />
+        <input placeholder="Search stock" id="search-stock" />
+    </div>
+    <table id="productsTable" class="table custom-table">
+        <thead>
+            <tr class="thead-row">
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Categories</th>
+                <th>Description</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts{
+    <script src="~/js/products/tables-search.js"></script>
+}

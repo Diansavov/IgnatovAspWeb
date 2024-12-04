@@ -1,0 +1,25 @@
+.custom-table {
+    color: white !important;
+}
+
+.dt-search {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.dt-paging {
+    display: flex;
+    justify-content: center;
+}
+
+.dt-info {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.search-bars{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
