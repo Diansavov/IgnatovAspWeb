@@ -34,5 +34,10 @@ namespace TestIgnatov.Services.Categories
             }
             return _categoriesRepository.GetByName(name);
         }
+
+        public List<Category> GetProductCategories(string productId)
+        {
+            return _categoriesRepository.GetAll().Where(x => x.Products == new List<Product>() {new Product() {Id = productId}}).ToList();
+        }
     }
 }

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text.Json;
@@ -79,6 +80,18 @@ namespace TestIgnatov.Controllers
 
             return json;
         }
+        /*
+    public string GetProductCategories(string productName)
+    {
+        Product product = _productsService.Get()
+
+        List<Category> categories = _categoriesService.GetProductCategories();
+
+        string json = System.Text.Json.JsonSerializer.Serialize(categories, _options);
+
+        return json;
+    }
+        */
         public string GetAllCategories()
         {
             List<Category> categories = _categoriesService.GetAll();
