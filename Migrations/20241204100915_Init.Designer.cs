@@ -12,8 +12,8 @@ using TestIgnatov.Data;
 namespace TestIgnatov.Migrations
 {
     [DbContext(typeof(ProductsDbContext))]
-    [Migration("20241202093606_Cool")]
-    partial class Cool
+    [Migration("20241204100915_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

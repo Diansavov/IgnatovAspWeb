@@ -6,13 +6,13 @@ html, body {
   min-height: 100%;
 }
 .content-inside {
-  padding: 20px;
   padding-bottom: 50px;
 }
 .footer {
+  height: 220px;
   margin-top: -50px;
-  height: 200px;
 }
+
 
 /*Body*/
 html {
@@ -37,7 +37,6 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
   color: white;
   
   background: url('/images/wolves.jpg')no-repeat;
@@ -63,14 +62,13 @@ body {
 
 /*Footer*/
 .footer {
+  position: static !important;
   display: flex;
   flex-wrap: nowrap;
   white-space: normal !important;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.5);
   line-height: 30px !important;
-  position: absolute;
-  bottom: 0;
   width: 100%;
 
 }
