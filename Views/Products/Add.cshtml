@@ -18,7 +18,7 @@
         <div class="add-form">
 
             <div class="inputs-container">
-                <a id="image-link"class="image-display"  >
+                <a id="image-link" class="image-display">
                     <img id="image" src="~/images/defaultImage.png" />
                 </a>
                 <input id="image-input" class="image-input" accept="image/png" type="file" asp-for="Image">
@@ -39,15 +39,17 @@
                     </div>
                 </div>
                 <div class="inputs-container">
-                    <textarea placeholder="Description" class="desc-input" asp-for="Description">
-
-            </textarea>
+                    <textarea placeholder="Description" class="desc-input" asp-for="Description"></textarea>
                     <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
                 <div class="inputs-container">
-                    <select class="form-select" name="CategoryName" id="categories" asp-for="CategoryName">
-                        <option value="null" selected disabled>Category</option>
-                    </select>
+                    @* <select class="form-select" name="CategoryName" id="categories" asp-for="CategoryName">
+                    <option value="null" selected disabled>Category</option>
+                    </select> *@
+                    <fieldset name="CategoryName" id="categories" class="categories-checkboxes">
+
+                    </fieldset>
+                    
                     <a class="category-link" asp-action="AddCategory" asp-controller="Category">Add a new Category</a>
                 </div>
                 <div class="justify-content-center d-flex gap-1">

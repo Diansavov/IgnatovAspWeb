@@ -11,5 +11,10 @@ namespace TestIgnatov.Models.ViewModels.Product
         public decimal Price { get; set; }
         [Required]
         public int Stock { get; set; }
+        [Required]
+        public string CategoryName { get; set; }
+        [Required]
+        public string Description { get; set; }
+        public IFormFile? Image { get; set; }
     }
 }

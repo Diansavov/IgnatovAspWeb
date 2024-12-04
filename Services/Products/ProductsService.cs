@@ -25,15 +25,17 @@ namespace TestIgnatov.Services.Products
                 Stock = addProducts.Stock,
                 Description = addProducts.Description,
             };
-            Category category = _categoriesRepository.GetByName(addProducts.CategoryName);
-            product.Categories.Add(category);
+            foreach (var categoryName in addProducts.CategoryName)
+            {
+                Category category = _categoriesRepository.GetByName(categoryName);
+                product.Categories.Add(category);
+
+            }
 
             string imagePath = "";
             if (addProducts.Image == null)
             {
                 imagePath = "wwwroot/images/defaultImage.png";
-                FileStream fileStream = new FileStream(imagePath, FileMode.Create);
-                addProducts.Image.CopyTo(fileStream);
             }
             else
             {
@@ -51,6 +53,7 @@ namespace TestIgnatov.Services.Products
                     else
                     {
                         imagePath = null;
+                        return;
                     }
                 }
             }

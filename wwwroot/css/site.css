@@ -1,3 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.content {
+  min-height: 100%;
+}
+.content-inside {
+  padding: 20px;
+  padding-bottom: 50px;
+}
+.footer {
+  margin-top: -50px;
+  height: 200px;
+}
+
 /*Body*/
 html {
   position: relative;
@@ -23,9 +39,10 @@ html {
 body {
   margin-bottom: 60px;
   color: white;
-
+  
   background: url('/images/wolves.jpg')no-repeat;
   background-position: center;
+  background-color: #121d31;
   background-size: cover;
 }
 

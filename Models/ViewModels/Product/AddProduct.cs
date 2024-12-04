@@ -12,7 +12,7 @@ namespace TestIgnatov.Models.ViewModels.Product
         [Required]
         public int Stock { get; set; }
         [Required]
-        public string CategoryName { get; set; }
+        public string[] CategoryName { get; set; }
         [Required]
         public string Description { get; set; }
         public IFormFile? Image { get; set; }

@@ -1,12 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let dropdown = document.getElementById('categories');
+    let fieldset = document.getElementById('categories');
     let categories = GetCategories();
     for (let i = 0; i < categories.length; i++) {
-        let option = document.createElement('option');
-        option.value = categories[i];
-        option.text = categories[i];
-        dropdown.add(option);
+        let divContainer = document.createElement('div');
+        divContainer.className = "category-label"
+        let inputCheckbox = document.createElement('input');
+        let inputLabel = document.createElement('label');
+        inputLabel.textContent = categories[i];
 
+        inputCheckbox.type = "checkbox"
+        inputCheckbox.name = "CategoryName"
+        inputCheckbox.value = categories[i];
+        divContainer.appendChild(inputLabel);
+        divContainer.appendChild(inputCheckbox);
+        fieldset.appendChild(divContainer);
     }
 });
 
